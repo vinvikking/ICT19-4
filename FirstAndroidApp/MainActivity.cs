@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Android.Content;
 
 namespace FirstAndroidApp
 {
@@ -11,7 +12,6 @@ namespace FirstAndroidApp
     {
         public Button button1;
         public TextView textview1;
-        public int counter = 0;
         public Toast toast;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -31,10 +31,12 @@ namespace FirstAndroidApp
         }
         public void CoolButtonClick(object sender, System.EventArgs e)
         {
-            counter++;
-            button1.Text = counter.ToString();
-            var toast = Toast.MakeText(Application.Context, $"{counter} geklikt op knopie", ToastLength.Long);
+            Intent dobbelsteenScreen = new Intent(this, typeof(DobbelsteenActivity));
+            var toast = Toast.MakeText(Application.Context, "Nieuwe pagina", ToastLength.Long);
             toast.Show();
+            StartActivity(dobbelsteenScreen);
+            var toast1 = Toast.MakeText(Application.Context, "Nieuwe pagina test", ToastLength.Long);
+            toast1.Show();
         }
     }
 }
