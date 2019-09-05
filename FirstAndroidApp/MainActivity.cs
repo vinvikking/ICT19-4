@@ -20,7 +20,6 @@ namespace FirstAndroidApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             button1 = FindViewById<Button>(Resource.Id.CoolButton);
-            textview1 = FindViewById<TextView>(Resource.Id.CoolText);
             button1.Click += CoolButtonClick;
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -31,10 +30,10 @@ namespace FirstAndroidApp
         }
         public void CoolButtonClick(object sender, System.EventArgs e)
         {
-            Intent dobbelsteenScreen = new Intent(this, typeof(DobbelsteenActivity));
+            Intent CounterScreen = new Intent(this, typeof(CounterActivity));
             var toast = Toast.MakeText(Application.Context, "Nieuwe pagina", ToastLength.Long);
             toast.Show();
-            StartActivity(dobbelsteenScreen);
+            StartActivity(CounterScreen);
             var toast1 = Toast.MakeText(Application.Context, "Nieuwe pagina test", ToastLength.Long);
             toast1.Show();
         }

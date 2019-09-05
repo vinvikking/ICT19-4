@@ -60,7 +60,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DobbelsteenActivity.cs" />
+    <Compile Include="CounterActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,7 +101,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_dobbelsteen.xml">
+    <AndroidResource Include="Resources\layout\activity_counter.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
