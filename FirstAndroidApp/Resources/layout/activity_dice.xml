@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:p4="http://xamarin.com/mono/android/designer"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tableLayout1"
+        android:gravity="top|center">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250px"
+                android:id="@+id/rollingDice" />
+            <ImageView
+                android:layout_width="250px"
+                android:layout_height="250px"
+                android:id="@+id/rollingDice2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <Button
+                android:text="Roll Dice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRollDice" />
+            <TextView
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRandNum"
+                android:textAlignment="center"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text=" Spelregels: \n rol de dobbelstenen, \n rol je niet dubbel ? \n geef de telefoon dan door.\n gooi je dubbel?\n drink net zoveel slokken als er ogen zijn"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/textView1" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>

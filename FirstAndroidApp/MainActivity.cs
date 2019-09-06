@@ -11,6 +11,7 @@ namespace FirstAndroidApp
     public class MainActivity : AppCompatActivity
     {
         public Button button1;
+        public Button button2;
         public TextView textview1;
         public Toast toast;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -21,6 +22,9 @@ namespace FirstAndroidApp
             SetContentView(Resource.Layout.activity_main);
             button1 = FindViewById<Button>(Resource.Id.CoolButton);
             button1.Click += CoolButtonClick;
+            button2 = FindViewById<Button>(Resource.Id.DiceButton);
+            button2.Click += DiceButtonClick;
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -31,11 +35,16 @@ namespace FirstAndroidApp
         public void CoolButtonClick(object sender, System.EventArgs e)
         {
             Intent CounterScreen = new Intent(this, typeof(CounterActivity));
-            var toast = Toast.MakeText(Application.Context, "Nieuwe pagina", ToastLength.Long);
+            var toast = Toast.MakeText(Application.Context, "Counter pagina", ToastLength.Long);
             toast.Show();
             StartActivity(CounterScreen);
-            var toast1 = Toast.MakeText(Application.Context, "Nieuwe pagina test", ToastLength.Long);
-            toast1.Show();
+        }
+        public void DiceButtonClick(object sender, System.EventArgs e)
+        {
+            Intent DiceScreen = new Intent(this, typeof(DiceActivity));
+            var toast = Toast.MakeText(Application.Context, "Dice pagina", ToastLength.Long);
+            toast.Show();
+            StartActivity(DiceScreen);
         }
     }
 }
