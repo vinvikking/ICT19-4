@@ -25,6 +25,6 @@ steps:
     appSlug: 'roel0071-hz.nl/Salutem'
     appFile: '**/*.apk'
     releaseNotesOption: 'input'
-    releaseNotesInput: ''
+    releaseNotesInput: 'test'
     destinationType: 'groups'
 
