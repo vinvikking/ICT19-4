@@ -18,3 +18,13 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'AppCenter Salutem'
+    appSlug: 'roel0071-hz.nl/apps/Salutem'
+    appFile: '**/*.apk'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'test'
+    destinationType: 'groups'
+
